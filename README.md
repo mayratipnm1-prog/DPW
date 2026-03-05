@@ -45,5 +45,5 @@ Berikut adalah daftar modul yang telah saya selesaikan:
 
 ---
 
-##📓 Catatan
+📓 Catatan
 Proyek ini dibuat untuk memenuhi tugas praktikum akademik dan sebagai sarana dokumentasi pembelajaran mandiri dalam bidang *Desain & Pemrograman Web*.
