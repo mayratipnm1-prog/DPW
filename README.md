@@ -28,7 +28,7 @@ Berikut adalah daftar modul yang telah saya selesaikan:
 |:--:|:---|:---|:---:|
 | 1 | Modul 1 | Modul Praktikum 1 - HTML Dasar | [Lihat Modul](./Modul1) |
 | 2 | Modul 2 | Modul Praktikum 2 - HTML Form | [Lihat Modul](./Modul2) |
-| 3 | Modul 3 | Modul Praktikum 3 - HTML5 Form (Lanjut) | [Lihat Modul](./modul3) |
+| 3 | Modul 3 | Modul Praktikum 3 - HTML5 Form (Lanjut) | [Lihat Modul](./Modul3) |
 | 4 | Modul 4 | Modul Praktikum 4 - CSS Dasar | [Lihat Modul](./modul4) |
 | 5 | Modul 5 | Modul Praktikum 5 | [Lihat Modul](./modul5) |
 | 6 | Modul 6 | Modul Praktikum 6 | [Lihat Modul](./modul6) |
