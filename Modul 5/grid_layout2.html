@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-gap: 50px;
+            background-color: #2196F3;
+            grid-template-columns: auto auto auto auto;
+            padding: 10px;
+        }
+
+        .item1 {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .item {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h2 {
+            background-color: #1565C0;
+            color: white;
+            padding: 8px 14px;
+        }
+
+        p.kesimpulan {
+            background-color: #e3f2fd;
+            border-left: 4px solid #2196F3;
+            padding: 10px 14px;
+            margin: 10px 0 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Skenario 1: grid-column-start dan grid-column-end -->
+    <h2>Skenario 1 - grid-column-start dan grid-column-end</h2>
+    <div class="grid-container">
+        <div class="item1">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div>Kesimpulan Skenario 1: Properti grid-column-start dan grid-column-end menentukan di kolom mana item mulai dan berakhir. Dengan nilai start:1 dan end:3, item1 akan membentang dari kolom 1 hingga kolom 3 (melebar 2 kolom). Mengubah nilai kombinasinya akan menghasilkan rentang kolom yang berbeda.</div>
+    </div>
+
+    <br>
+
+    <!-- Skenario 2: grid-template-columns dengan berbagai nilai -->
+    <h2>Skenario 2 - grid-template-columns berbagai nilai</h2>
+
+    <p><strong>auto auto auto auto :</strong></p>
+    <style>
+        .gc_s2a {
+            display: grid;
+            grid-gap: 50px;
+            background-color: #2196F3;
+            grid-template-columns: auto auto auto auto;
+            padding: 10px;
+        }
+        .gc_s2a .item1 { grid-column-start: 1; grid-column-end: 3; background-color: rgba(255,255,255,0.8); padding: 20px; font-size:30px; text-align:center; }
+        .gc_s2a .item  { background-color: rgba(255,255,255,0.8); border: 1px solid rgba(0,0,0,0.8); padding: 20px; font-size:30px; text-align:center; }
+    </style>
+    <div class="gc_s2a">
+        <div class="item1">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+    </div>
+
+    <p><strong>70px 300px auto 40px :</strong></p>
+    <style>
+        .gc_s2b {
+            display: grid;
+            grid-gap: 50px;
+            background-color: #2196F3;
+            grid-template-columns: 70px 300px auto 40px;
+            padding: 10px;
+        }
+        .gc_s2b .item1 { grid-column-start: 1; grid-column-end: 3; background-color: rgba(255,255,255,0.8); padding: 20px; font-size:30px; text-align:center; }
+        .gc_s2b .item  { background-color: rgba(255,255,255,0.8); border: 1px solid rgba(0,0,0,0.8); padding: 20px; font-size:30px; text-align:center; }
+    </style>
+    <div class="gc_s2b">
+        <div class="item1">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+    </div>
+
+    <p><strong>10px 500px 20px 10px :</strong></p>
+    <style>
+        .gc_s2c {
+            display: grid;
+            grid-gap: 50px;
+            background-color: #2196F3;
+            grid-template-columns: 10px 500px 20px 10px;
+            padding: 10px;
+        }
+        .gc_s2c .item1 { grid-column-start: 1; grid-column-end: 3; background-color: rgba(255,255,255,0.8); padding: 20px; font-size:30px; text-align:center; }
+        .gc_s2c .item  { background-color: rgba(255,255,255,0.8); border: 1px solid rgba(0,0,0,0.8); padding: 20px; font-size:30px; text-align:center; overflow:hidden; }
+    </style>
+    <div class="gc_s2c">
+        <div class="item1">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+    </div>
+
+    <p class="kesimpulan">
+        Kesimpulan Skenario 2: Properti <strong>grid-template-columns</strong> menentukan jumlah dan lebar setiap kolom dalam grid. Menggunakan nilai <em>auto</em> membagi ruang tersisa secara merata, sedangkan nilai piksel (px) menentukan lebar kolom secara eksplisit. Kombinasi keduanya memungkinkan layout yang fleksibel sekaligus terkontrol.
+    </p>
+
+</body>
+</html>

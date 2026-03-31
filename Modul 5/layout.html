@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Layout CSS Grid</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        /* Container utama menggunakan CSS Grid */
+        .layout-container {
+            display: grid;
+            grid-template-areas:
+                "header header header"
+                "menu   main   right"
+                "footer footer footer";
+            grid-template-columns: 150px 1fr 150px;
+            grid-template-rows: auto 1fr auto;
+            grid-gap: 5px;
+            min-height: 400px;
+        }
+
+        /* Header */
+        .header {
+            grid-area: header;
+            background-color: #b0bec5;
+            padding: 20px;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        /* Menu / Sidebar kiri */
+        .menu {
+            grid-area: menu;
+            background-color: #b0bec5;
+            padding: 20px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        /* Konten utama */
+        .main {
+            grid-area: main;
+            background-color: #cfd8dc;
+            padding: 20px;
+            text-align: center;
+            font-size: 18px;
+            min-height: 200px;
+        }
+
+        /* Sidebar kanan */
+        .right {
+            grid-area: right;
+            background-color: #b0bec5;
+            padding: 20px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        /* Footer */
+        .footer {
+            grid-area: footer;
+            background-color: #b0bec5;
+            padding: 20px;
+            text-align: center;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="layout-container">
+        <div class="header">Header</div>
+        <div class="menu">Menu</div>
+        <div class="main">Main</div>
+        <div class="right">Right</div>
+        <div class="footer">Footer</div>
+    </div>
+
+</body>
+</html>

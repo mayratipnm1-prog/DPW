@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - May Website</title>
+
+    <!-- Materialize CSS CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- ikon CSS dari frame work -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        nav { background-color: #ad4800; }
+        nav ul a { color: #FFF9C4; }
+
+        .page-header {
+            background: linear-gradient(135deg,#ad4800, #c97538);
+            color: #FFF9C4;
+            padding: 60px 0;
+            text-align: center;
+        }
+        .page-header h2 { font-weight: bold; }
+
+        .input-field .prefix ~ input, 
+        .input-field .prefix ~ textarea, 
+        .input-field .prefix ~ label,
+        .input-field .prefix ~ .select-wrapper {
+            margin-left: 3.5rem !important;
+            width: calc(100% - 3.5rem) !important;
+        }
+
+        .input-field label { color: #ad4800; }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+
+        .contact-item .icon-box {
+            background-color: #FFFBEB; 
+            border: 1px solid #fbc02d; 
+            border-radius: 50%;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-right: 15px; 
+        }
+
+        .contact-item .icon-box i { font-size: 1.5rem; color: #ad4800; }
+        .contact-item .text h6 { margin: 0; font-weight: 700; color: #ad4800; font-size: 1rem; }
+        .contact-item .text p { margin: 4px 0 0; font-size: 14px; color: #470b0b; line-height: 1.4; }
+
+        .section-title {
+            color: #c97538;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+    </style>
+</head>
+
+<nav>
+        <div class="nav-wrapper">
+            <a href="Home.html" class="brand-logo" style="color: #FFF9C4 !important;"> 
+                <i class= "material-icons" style="color: #FFF9C4 !important;">web</i>May Website
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="Home.html"><i class="material-icons left">home</i>Home</a></li>
+                <li><a href="About.html"><i class="material-icons left">person</i>About</a></li>
+                <li><a href="Portofolio.html"><i class="material-icons left">work</i>Portofolio</a></li>
+                <li><a href="Kontak.html"><i class="material-icons left">contact_mail</i>Kontak</a></li>
+                <li><a href="Produk.html"><i class="material-icons left">shopping_cart</i>Produk</a></li>
+        </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h2><i class="material-icons large">contact_mail</i><br>Kontak</h2>
+            <p>Hubungi kami untuk kerjasama ataupun jika ada kepentingan</p>
+        </div>
+    </div>
+
+    <!-- Konten utama -->
+    <div class="container" style="margin-top: 50px;">
+        <div class="row">
+            <div class="col s12 m7">
+                <h5 class="section-title">
+                    <i class="material-icons left">edit</i>Kirim Pesan
+                </h5>
+                
+                <div class="card-panel white z-depth-1" style="padding: 30px; border-radius: 12px; border: 1px solid #c97538;">
+                    <form id="contactForm">
+                        <div class="row">
+                            <div class="input-field col s12 m6">
+                                <i class="material-icons prefix">person</i>
+                                <input id="nama" type="text" class="validate" required>
+                                <label for="nama">Nama Lengkap</label>
+                            </div>
+                            <div class="input-field col s12 m6">
+                                <i class="material-icons prefix">email</i>
+                                <input id="email" type="email" class="validate" required>
+                                <label for="email">Alamat Email</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">chat_bubble</i>
+                                <input id="subjek" type="text" class="validate" required>
+                                <label for="subjek">Subjek Pesan</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">label</i>
+                                <select id="topik">
+                                    <option value="" disabled selected>Pilih Topik Pertanyaan</option>
+                                    <option value="1">Pertanyaan Umum</option>
+                                    <option value="2">Kerja Sama</option>
+                                    <option value="3">Laporan Masalah</option>
+                                </select>
+                                <label>Topik</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">mode_edit</i>
+                                <textarea id="pesan" class="materialize-textarea" required></textarea>
+                                <label for="pesan">Pesan Anda</label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn waves-effect waves-light" style="width: 100%; height: 50px; background-color: #c97538; border-radius: 8px;">
+                            Kirim Pesan <i class="material-icons right">send</i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+
+            <!-- Info Kontak -->
+            <div class="col s12 m5" style="padding-left: 30px;">
+    
+                <h5 class="section-title">
+                    <i class="material-icons left">phone</i>Info Kontak
+                </h5>
+
+                <div class="contact-wrapper">
+                    <div class="contact-item">
+                        <div class="icon-box">
+                            <i class="material-icons">place</i>
+                        </div>
+                        <div class="text">
+                            <h6>Alamat</h6>
+                            <p>Jl. Raya Kenep,<br> Sumbersari, Saradan, Madiun, Jawa Timur</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="icon-box">
+                            <i class="material-icons">phone</i>
+                        </div>
+                        <div class="text">
+                            <h6>Telepon</h6>
+                            <p>+62 877 5777 1142</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="icon-box">
+                            <i class="material-icons">email</i>
+                        </div>
+                        <div class="text">
+                            <h6>Email</h6>
+                            <p>mayra.tipnm1@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="icon-box">
+                            <i class="material-icons">schedule</i>
+                        </div>
+                        <div class="text">
+                            <h6>Jam Aktif</h6>
+                            <p>Senin – Jumat: 08.00 – 17.00<br>Sabtu: 08.00 – 12.00</p>
+                        </div>
+                    </div>
+
+                    <!-- Media Sosial-->
+                </div> <div class="social-wrapper" style="margin-top: 40px; border-top: 1px solid #e0e0e0; padding-top: 20px;">
+                    <p style="color: #ad4800; font-weight: bold; margin-bottom: 15px; font-size: 1.1rem;">Ikuti Kami</p>
+                    
+                    <a href="https://www.linkedin.com/in/mayra-ruhandini-mr2956/?locale=in" class="btn-floating btn-small waves-effect waves-light" style="background-color: #0077b5; margin-right: 10px;">
+                    <i class="material-icons">work</i>
+                    </a>
+
+                    <a href="https://www.instagram.com/mayraruhand?igsh=M3lyZnAwNHBwMXN0" class="btn-floating btn-small waves-effect waves-light" style="background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%); margin-right: 10px;">
+                        <i class="material-icons">camera_alt</i>
+                    </a>
+
+                    <a href="https://github.com/mayratipnm1-prog/DPW" class="btn-floating btn-small waves-effect waves-light" style="background-color: #000000; margin-right: 10px;">
+                        <i class="material-icons">share</i>
+                    </a>
+
+                    <a href="https://youtube.com/@meyy295?si=LijIpy9AtoNT1h-4" class="btn-floating btn-small waves-effect waves-light" style="background-color: #ff0000;">
+                        <i class="material-icons">play_arrow</i>
+                    </a>
+                </div>
+    </div>
+
+        </div> </div> <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+        <!-- Footer -->
+    <footer class="page-footer" style="padding: 0; background-color: #ad4800 !important; border-top: 1px solid #FFF9C4;"> 
+    <div class="container">
+        <div class="row" style="margin-bottom: 0; padding: 10px 0;">
+        <div class="col l8 s12">
+            <h6 style="margin: 0; color: #FFF9C4; font-weight: bold;">MateriWeb</h6>
+            <p style="margin: 0; font-size: 12px; color: #FFF9C4;">
+            Belajar desain web praktis dengan Materialize CSS.
+            </p>
+        </div>
+        <div class="col l4 s12">
+            <div style="margin-top: 5px;">
+                <a href="Home.html" style="margin-left: 10px; font-size: 12px; color: #FFF9C4; font-weight: 500;" class="right">Home</a>
+                <a href="About.html" style="margin-left: 10px; font-size: 12px; color: #FFF9C4; font-weight: 500;" class="right">About</a>
+                <a href="Portofolio.html" style="margin-left: 10px; font-size: 12px; color: #FFF9C4; font-weight: 500;" class="right">Portofolio</a>
+                <a href="Produk.html" style="margin-left: 10px; font-size: 12px; color: #FFF9C4; font-weight: 500;" class="right">Produk</a>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="footer-copyright" style="line-height: 30px; height: 30px; background-color: #ad4800;">
+        <div class="container" style="font-size: 11px; color: #FFF9C4;">
+        © 2026 MaterializeCSS | Mayra Ruhandini - 253307003
+        <a style="color: #FFF9C4; font-weight: bold;" class="right" href="https://pnm.ac.id/">Politeknik Negeri Madiun</a>
+        </div>
+    </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            M.AutoInit();
+            
+            const contactForm = document.getElementById('contactForm');
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault(); 
+
+                M.toast({
+                    html: 'Terkirim! Terima kasih telah menghubungi May.', 
+                    classes: 'rounded green darken-3',
+                    displayLength: 4000 
+                });
+
+                contactForm.reset();
+                M.updateTextFields(); 
+            });
+        });
+    </script>
+</body>
+</html>

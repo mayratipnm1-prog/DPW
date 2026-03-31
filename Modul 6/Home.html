@@ -1,0 +1,147 @@
+<! DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home - Belajar Framework Materialize</title>
+
+<!-- Materialize CSS CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<!-- ikon CSS dari frame work -->
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<style>
+        nav {
+            background-color: maroon;
+        }
+        nav ul a {
+            color: rgb(235, 231, 215);
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, rgb(162, 86, 86), rgb(201, 130, 130));
+            color: rgb(235, 231, 215);
+            padding: 80px 0;
+            text-align: center;
+        }
+        .hero-section h1 {
+            font-size: 2.8rem;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+        .hero-section p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+</style>
+</head>
+
+<body>
+ <!-- Navbar -->
+  <nav>
+    <div class="nav-wrapper">
+        <a href="Home.html" class="brand-logo" style="color: rgb(235, 231, 215) !important;"> 
+            <i class= "material-icons" style="color: rgb(235, 231, 215) !important;">web</i>May Website
+        </a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="Home.html"><i class="material-icons left">home</i>Home</a></li>
+            <li><a href="About.html"><i class="material-icons left">person</i>About</a></li>
+            <li><a href="Portofolio.html"><i class="material-icons left">work</i>Portofolio</a></li>
+            <li><a href="Kontak.html"><i class="material-icons left">contact_mail</i>Kontak</a></li>
+            <li><a href="Produk.html"><i class="material-icons left">shopping_cart</i>Produk</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="container">
+            <h1>Selamat Datang di May Website</h1>
+            <p>Website ini dibuat untuk menerapkan<strong> Materialize CSS Framework</strong></p>
+            </a>
+        </div>
+    </div>
+
+    <!-- Deskripsi & Card Section -->
+    <div class="container">
+        <h4 class="section-title">Apa itu Materialize CSS?</h4>
+        <div class="row">
+            <div class="col s12 m4">
+                <div class="card hoverable">
+                    <div class="card-content center-align">
+                        <i class="material-icons large blue-text">grid_on</i>
+                        <span class="card-title ">Grid System</span>
+                        <p>Materialize menggunakan sistem grid 12 kolom yang responsif dan mudah digunakan untuk menyusun layout halaman.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://materializecss.com/grid.html" class="blue-text">Pelajari Grid</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 m4">
+                <div class="card hoverable">
+                    <div class="card-content center-align">
+                        <i class="material-icons large red-text">palette</i>
+                        <span class="card-title">Komponen UI</span>
+                        <p>Tersedia berbagai komponen siap pakai seperti navbar, card, modal, form, button, icon, dan masih banyak lagi.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://materializecss.com/buttons.html" class="red-text">Lihat Komponen</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 m4">
+                <div class="card hoverable">
+                    <div class="card-content center-align">
+                        <i class="material-icons large green-text">devices</i>
+                        <span class="card-title">Responsif</span>
+                        <p>Semua komponen Materialize dirancang mobile-first dan secara otomatis menyesuaikan tampilan di berbagai ukuran layar.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://materializecss.com/mobile.html" class="green-text">Lihat Contoh</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ <!-- Footer -->
+    <footer class="page-footer" style="padding: 0; background-color: #800000 !important;"> 
+  <div class="container">
+    <div class="row" style="margin-bottom: 0; padding: 10px 0;">
+      <div class="col l8 s12">
+        <h6 class="white-text" style="margin: 0;">MateriWeb</h6>
+        <p class="grey-text text-lighten-4" style="margin: 0; font-size: 12px;">
+          Belajar desain web praktis dengan Materialize CSS.
+        </p>
+      </div>
+      <div class="col l4 s12">
+        <div style="margin-top: 5px;">
+            <a class="grey-text text-lighten-3 right" href="About.html" style="margin-right: 10px; font-size: 12px;">About</a>
+            <a class="grey-text text-lighten-3 right" href="Portofolio.html" style="margin-right: 10px; font-size: 12px;">Portofolio</a>
+            <a class="grey-text text-lighten-3 right" href="Kontak.html" style= "margin-right: 10px; font-size: 12px;">Kontak</a>
+            <a class="grey-text text-lighten-3 right" href="Produk.html" style="margin-right: 10px; font-size: 12px;">Produk</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    <div class="footer-copyright" style="line-height: 30px; height: 30px;">
+        <div class="container" style="font-size: 11px;">
+        © 2026 MaterializeCSS | Mayra Ruhandini - 253307003
+        <a class="grey-text text-lighten-4 right" href="https://pnm.ac.id/">Politeknik Negeri Madiun</a>
+        </div>
+    </div>
+    </footer>
+
+ <!-- Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            M.AutoInit();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Template Web CSS</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ===== Header ===== */
+        #header {
+            background-color: blue;
+            color: white;
+            padding: 15px 20px;
+            flex-shrink: 0;
+        }
+
+        #header h1 {
+            font-size: 28px;
+            color: yellow;
+        }
+
+        #header p {
+            font-size: 14px;
+            color: white;
+        }
+
+        /* ===== Wrapper ===== */
+        #wrapper {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        /* ===== Sidebar / Navigation ===== */
+        #sidebar {
+            width: 200px;
+            min-width: 200px;
+            border: 2px dashed #555;
+            padding: 10px;
+            overflow-y: auto;
+            flex-shrink: 0;
+        }
+
+        #sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        #sidebar ul li {
+            padding: 3px 0;
+        }
+
+        #sidebar ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 13px;
+            display: block;
+            padding: 4px 6px;
+            border-radius: 3px;
+            transition: background 0.1s;
+        }
+
+        #sidebar ul li a:hover {
+            text-decoration: underline;
+            color: gray;
+        }
+
+        #sidebar ul li a.active {
+            background-color: #dbeafe;
+            color: blue;
+            font-weight: bold;
+        }
+
+        /* ===== Divider vertikal ===== */
+        #divider {
+            width: 2px;
+            background-color: #aaa;
+            margin: 10px 5px;
+            flex-shrink: 0;
+        }
+
+        /* ===== Konten Utama (info PNM) ===== */
+        #main-content {
+            width: 260px;
+            min-width: 260px;
+            padding: 20px 15px;
+            text-align: center;
+            border-right: 1px solid #ddd;
+            flex-shrink: 0;
+            overflow-y: auto;
+        }
+
+        #main-content img {
+            width: 80px;
+            margin-bottom: 10px;
+        }
+
+        #main-content h2 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        #main-content p {
+            color: red;
+            font-size: 13px;
+            text-align: center;
+            margin-top: 10px;
+            line-height: 1.7;
+        }
+
+        /* ===== Divider tengah ===== */
+        #divider2 {
+            width: 2px;
+            background-color: #aaa;
+            margin: 10px 5px;
+            flex-shrink: 0;
+        }
+
+        /* ===== Panel Tugas (kanan) ===== */
+        #panel-tugas {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        #panel-header {
+            background-color: #f0f4f8;
+            border-bottom: 1px solid #ccc;
+            padding: 8px 14px;
+            font-size: 12px;
+            font-weight: bold;
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-shrink: 0;
+        }
+
+        #panel-header span {
+            font-weight: normal;
+            color: #666;
+            font-size: 11px;
+        }
+
+        #panel-header a {
+            font-size: 11px;
+            color: blue;
+            text-decoration: none;
+        }
+
+        #panel-header a:hover {
+            text-decoration: underline;
+        }
+
+        #panel-tugas iframe {
+            flex: 1;
+            width: 100%;
+            border: none;
+            background: #fff;
+        }
+
+        /* ===== Footer ===== */
+        #footer {
+            background-color: #cccccc;
+            text-align: right;
+            padding: 10px 20px;
+            font-size: 13px;
+            color: #333;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div id="header">
+        <h1>Halo CSS !</h1>
+        <p>Ini adalah website CSS saya</p>
+    </div>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar">
+            <ul>
+                <li><a href="#" onclick="tampilkan('border-style.html', 'Border Style', this); return false;" class="active">Border Style</a></li>
+                <li><a href="#" onclick="tampilkan('combinator.html', 'Combinator Selectors', this); return false;">Combinator</a></li>
+                <li><a href="#" onclick="tampilkan('display.html', 'Display', this); return false;">Display</a></li>
+                <li><a href="#" onclick="tampilkan('header.html', 'External CSS (header)', this); return false;">External CSS</a></li>
+                <li><a href="#" onclick="tampilkan('hyperlink.html', 'Hyperlink', this); return false;">Hyperlink</a></li>
+                <li><a href="#" onclick="tampilkan('margin.html', 'Margin', this); return false;">Margin</a></li>
+                <li><a href="#" onclick="tampilkan('padding.html', 'Padding', this); return false;">Padding</a></li>
+                <li><a href="#" onclick="tampilkan('pseudo.html', 'Pseudo-class', this); return false;">Pseudo-class</a></li>
+                <li><a href="#" onclick="tampilkan('pseudo_elemen.html', 'Pseudo-elements', this); return false;">Pseudo-elements</a></li>
+                <li><a href="#" onclick="tampilkan('selector.html', 'Selector ID', this); return false;">Selector ID</a></li>
+                <li><a href="#" onclick="tampilkan('simple.html', 'Simple Selectors', this); return false;">Simple Selectors</a></li>
+                <li><a href="#" onclick="tampilkan('template.html', 'Template', this); return false;">Template</a></li>
+            </ul>
+        </div>
+
+        <!-- Divider -->
+        <div id="divider"></div>
+
+        <!-- Main Content (Info PNM) -->
+        <!-- Divider 2 -->
+        <div id="divider2"></div>
+
+        <!-- Panel Tugas -->
+        <div id="panel-tugas">
+            <div id="panel-header">
+                <div>
+                    Preview: <span id="judul-panel">Border Style</span>
+                </div>
+                <a id="link-panel" href="border-style.html" target="_blank">↗ Buka di tab baru</a>
+            </div>
+            <iframe id="frame-tugas" src="border-style.html" title="Preview Tugas"></iframe>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div id="footer">
+        Mayra Ruhandini | 253307003 | TI - 2A
+    </div>
+
+    <script>
+        function tampilkan(file, judul, el) {
+            // update iframe
+            document.getElementById('frame-tugas').src = file;
+            // update header panel
+            document.getElementById('judul-panel').textContent = judul;
+            document.getElementById('link-panel').href = file;
+            // update active class
+            var semua = document.querySelectorAll('#sidebar ul li a');
+            semua.forEach(function(a) { a.classList.remove('active'); });
+            el.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
