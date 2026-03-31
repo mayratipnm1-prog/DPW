@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pseudo-class Selector</title>
+    <style>
+        p {
+            display: none;
+            background-color: darkgray;
+            padding: 20px;
+        }
+
+        div:hover p { /* :hover adalah CSS Pseudo Class */
+            display: block;
+        }
+
+        /* Pseudo-class untuk link */
+        a:link {
+            color: blue;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: purple;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: red;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        a:active {
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div>Letakkan kursor disini untuk melihat div elemet
+        <p>Saya adalah element p</p>
+    </div>
+
+    <br>
+    <p style="display:block; background-color: transparent; padding: 0;">
+        Contoh link yang berubah warna ketika mouse diarahkan ke atasnya:
+    </p>
+    <a href="#">Arahkan mouse ke link ini untuk melihat perubahan warna</a>
+</body>
+</html>

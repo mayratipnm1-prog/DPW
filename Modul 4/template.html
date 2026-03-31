@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Template Web CSS</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Tahoma, Verdana, sans-serif;
+        }
+
+        /* Header */
+        #header {
+            background-color: blue;
+            color: white;
+            padding: 15px 20px;
+        }
+
+        #header h1 {
+            font-size: 28px;
+            color: yellow;
+        }
+
+        #header p {
+            font-size: 14px;
+            color: white;
+        }
+
+        /* Wrapper konten utama */
+        #wrapper {
+            display: flex;
+            width: 100%;
+        }
+
+        /* Sidebar / Navigation */
+        #sidebar {
+            width: 200px;
+            min-height: 300px;
+            border: 2px dashed #555;
+            padding: 10px;
+        }
+
+        #sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        #sidebar ul li {
+            padding: 5px 0;
+        }
+
+        #sidebar ul li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #sidebar ul li a:hover {
+            text-decoration: underline;
+            color: gray;
+        }
+
+        /* Divider vertikal */
+        #divider {
+            width: 2px;
+            background-color: #aaa;
+            margin: 10px 5px;
+        }
+
+        /* Konten utama */
+        #main-content {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #main-content img {
+            width: 80px;
+            margin-bottom: 10px;
+        }
+
+        #main-content h2 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        #main-content p {
+            color: red;
+            font-size: 13px;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        /* Footer */
+        #footer {
+            background-color: #cccccc;
+            text-align: right;
+            padding: 10px 20px;
+            font-size: 13px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div id="header">
+        <h1>Halo CSS !</h1>
+        <p>Ini adalah website CSS saya</p>
+    </div>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar">
+            <ul>
+                <li><a href="#">Menu 1</a></li>
+                <li><a href="#">Menu 2</a></li>
+                <li><a href="#">Menu 3</a></li>
+                <li><a href="#">Menu 4</a></li>
+                <li><a href="#">Menu 5</a></li>
+                <li><a href="#">Menu 6</a></li>
+            </ul>
+        </div>
+
+        <!-- Divider -->
+        <div id="divider"></div>
+
+        <!-- Main Content -->
+        <div id="main-content">
+            <img src="gambar/logo.png" alt="Logo PNM">
+            <h2>TI</h2>
+            <h3>Politeknik Negeri Madiun</h3>
+            <p>
+                Mewujudkan pendidikan tinggi vokasi dalam bidang<br>
+                Teknologi Informasi dan penerapannya yang berkualitas,<br>
+                inovatif dan berdaya saing Nasional.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div id="footer">
+        Mayra Ruhandini | 253307003 | TI - 2A
+    </div>
+
+</body>
+</html>
