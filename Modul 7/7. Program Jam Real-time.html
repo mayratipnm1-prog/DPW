@@ -1,0 +1,21 @@
+<html>
+
+<head>
+    <title>Waktu Real-time</title>
+</head>
+
+<body onload="tampilkanWaktu()">
+    <h2>Waktu Saat Ini:</h2>
+    <div id="clock" style="font-size: 24px; font-weight: bold; color: brown;"></div>
+
+    <script>
+        function tampilkanWaktu() {
+            setInterval(() => {
+                const sekarang = new Date();
+                document.getElementById('clock').innerHTML = sekarang.toLocaleString('id-ID');
+            }, 1000);
+        }
+    </script>
+</body>
+
+</html>

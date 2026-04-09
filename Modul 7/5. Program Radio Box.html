@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mengakses Objek Radio</title>
+</head>
+
+<body>
+    <h3>Klik pada musik yang paling Anda sukai:</h3>
+
+    <form name="formTes">
+        <div class="option" onclick="pilih(0)">
+            <input type="radio" name="radioMusik" value="Jazz"> Jazz
+        </div>
+        <div class="option" onclick="pilih(1)">
+            <input type="radio" name="radioMusik" value="Keroncong"> Keroncong
+        </div>
+        <div class="option" onclick="pilih(2)">
+            <input type="radio" name="radioMusik" value="Dangdut"> Dangdut
+        </div>
+        <div class="option" onclick="pilih(3)">
+            <input type="radio" name="radioMusik" value="Lainnya"> Lainnya
+        </div>
+
+        <hr>
+        <p>Pilihan saat ini:</p>
+        <input type="text" name="fieldMusik" size="40" readonly>
+    </form>
+
+    <div id="hasil">
+        Belum ada pilihan
+    </div>
+
+    <script>
+        function pilih(index) {
+            document.formTes.radioMusik[index].checked = true;
+
+            document.formTes.fieldMusik.value = document.formTes.radioMusik[index].value;
+
+            var options = document.querySelectorAll('.option');
+            options.forEach(function (opt, i) {
+                if (i === index) {
+                    opt.classList.add('selected');
+                } else {
+                    opt.classList.remove('selected');
+                }
+            });
+
+            var nilai = document.formTes.radioMusik[index].value;
+            document.getElementById('hasil').innerHTML =
+                '<strong>Kamu memilih:</strong><br>' + nilai;
+        }
+    </script>
+</body>
+
+</html>

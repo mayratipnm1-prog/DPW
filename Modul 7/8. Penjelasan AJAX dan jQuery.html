@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jawaban Nomor 8 - AJAX & jQuery</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            color: maroon;
+        }
+
+        h2 {
+            color: rgb(159, 20, 20);
+            border-bottom: 2px solid #eee;
+        }
+
+        h3 {
+            color: rgb(200, 93, 93);
+        }
+
+        code {
+            background: #f4f4f4;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+
+        .example-box {
+            border: 1px solid #ddd;
+            padding: 15px;
+            background: #fafafa;
+            margin-top: 10px;
+        }
+
+        .note {
+            font-style: italic;
+            color: #666;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+    <h2>Nomor 8: Uraian AJAX dan jQuery</h2>
+
+    <h3>1. Apa itu AJAX?</h3>
+    <p>
+        <strong>AJAX (Asynchronous JavaScript and XML)</strong> adalah teknik pengembangan web yang memungkinkan halaman
+        web memperbarui data secara
+        <em>asynchronous</em> (tidak sinkron). Ini berarti halaman dapat mengirim dan menerima data dari
+        server di latar belakang tanpa
+        harus memuat ulang (refresh) seluruh halaman web tersebut.
+    </p>
+
+    <h3>2. Apa itu jQuery?</h3>
+    <p>
+        <strong>jQuery</strong> adalah <em>library</em> JavaScript yang cepat, kecil, dan kaya fitur. jQuery
+        dirancang untuk menyederhanakan
+        penulisan skrip sisi klien (client-side script), seperti manipulasi dokumen HTML, penanganan event, animasi, dan
+        mempermudah penggunaan AJAX.
+    </p>
+
+    <h3>3. Cara Menggunakan jQuery</h3>
+    <p>
+        Untuk menggunakan jQuery, Anda perlu memasukkan library jQuery ke dalam file HTML Anda, baik dengan mengunduh
+        file-nya secara lokal atau
+        menggunakan <strong>Content Delivery Network (CDN)</strong> seperti yang dilakukan pada kode ini.
+    </p>
+
+    <h3>4. Contoh Pemanfaatan jQuery Sederhana</h3>
+    <p>Di bawah ini adalah contoh penggunaan jQuery untuk menyembunyikan dan menampilkan teks secara dinamis:</p>
+
+    <div class="example-box">
+        <p id="teksInfo">Klik tombol di bawah untuk melihat keajaiban jQuery!</p>
+        <button id="btnSembunyi">Sembunyikan Teks</button>
+        <button id="btnTampil">Tampilkan Teks</button>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("#btnSembunyi").click(function () {
+                $("#teksInfo").hide(500); // Sembunyikan dalam 500ms
+            });
+
+            $("#btnTampil").click(function () {
+                $("#teksInfo").show(500); // Tampilkan dalam 500ms
+            });
+        });
+    </script>
+
+    <p class="note">
+        *Contoh di atas mendemonstrasikan bagaimana jQuery mempermudah pemilihan elemen (selector) dan penanganan event
+        klik[cite: 258].
+    </p>
+
+</body>
+
+</html>
