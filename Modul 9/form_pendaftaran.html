@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendaftaran</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 500px; margin: 40px auto; padding: 20px; }
+        table { width: 100%; border-collapse: collapse; }
+        td { padding: 6px 4px; vertical-align: top; }
+        input[type="text"], input[type="email"], input[type="date"], textarea {
+            width: 100%; padding: 4px; box-sizing: border-box;
+        }
+        input[type="submit"] { padding: 6px 20px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h2>Form Pendaftaran</h2>
+    <form method="POST" action="proses_pendaftaran.php">
+        <table>
+            <tr>
+                <td>Nim:</td>
+                <td><input type="text" name="nim" placeholder="nim"></td>
+            </tr>
+            <tr>
+                <td>Nama Lengkap:</td>
+                <td><input type="text" name="nama" placeholder="nama"></td>
+            </tr>
+            <tr>
+                <td>E-mail:</td>
+                <td><input type="email" name="email" placeholder="email"></td>
+            </tr>
+            <tr>
+                <td>Tempat, Tanggal Lahir:</td>
+                <td>
+                    <input type="text" name="tempat" placeholder="tempat" style="width:48%">
+                    <input type="date" name="ttl" style="width:48%">
+                </td>
+            </tr>
+            <tr>
+                <td>Alamat:</td>
+                <td><textarea name="alamat" rows="3" placeholder="alamat"></textarea></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    <input type="radio" name="gender" value="Laki-Laki"> Laki-Laki
+                    <input type="radio" name="gender" value="Perempuan" checked> Perempuan
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="kirim"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

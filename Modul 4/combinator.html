@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Combinator Selector</title>
+    <style>
+        div p { /* no 1 */
+            color: red;
+        }
+
+        div > p { /* no 2 */
+            background-color: yellow;
+        }
+
+        div + p { /* no 3 */
+            background-color: darkgray;
+        }
+
+        div ~ p { /* no 4 */
+            color: cyan;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>This is a paragraph. Selektor no 1 (div p): memilih semua elemen &lt;p&gt; yang berada di dalam elemen &lt;div&gt; (descendant). Teks berwarna merah karena dipengaruhi selektor "div p".</p>
+        <p>This is a paragraph. Selektor no 2 (div &gt; p): memilih elemen &lt;p&gt; yang merupakan anak langsung dari &lt;div&gt;. Background kuning karena dipengaruhi selektor "div &gt; p".</p>
+    </div>
+    <p>This is a paragraph. Selektor no 3 (div + p): memilih elemen &lt;p&gt; pertama yang langsung berada setelah elemen &lt;div&gt; (adjacent sibling). Background darkgray karena dipengaruhi selektor "div + p".</p>
+    <p>This is a paragraph. Selektor no 4 (div ~ p): memilih semua elemen &lt;p&gt; yang merupakan saudara (sibling) setelah elemen &lt;div&gt;. Teks berwarna cyan karena dipengaruhi selektor "div ~ p".</p>
+</body>
+</html>

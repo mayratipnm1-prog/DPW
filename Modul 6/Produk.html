@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - May Website</title>
+
+    <!-- Materialize CSS CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- ikon CSS dari frame work -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        nav { background-color: #e91e63; }
+        nav ul a { color: #fce4ec; }
+
+        .page-header {
+            background: linear-gradient(135deg,#e91e63, #f35589);
+            color: #fce4ec;
+            padding: 60px 0;
+            text-align: center;
+        }
+        .page-header h2 { font-weight: bold; }
+
+        .card-product {
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card-product:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        .card-image img {
+            height: 200px;
+            object-fit: cover;
+        }
+        .price-tag {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #e91e63;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .badge-new {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: #4caf50;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+        }
+        .btn-cart {
+            background: linear-gradient(135deg, #e91e63 0%, #c2185b 100%);
+        }
+        .btn-cart:hover {
+            background: linear-gradient(135deg, #c2185b 0%, #880e4f 100%);
+        }
+        .search-bar {
+            background: rgba(255,255,255,0.2);
+            border-radius: 30px;
+            padding: 5px 20px;
+        }
+        .search-bar input {
+            color: white !important;
+            border-bottom: none !important;
+        }
+        .search-bar input::placeholder {
+            color: rgba(255,255,255,0.8);
+        }
+    </style>
+
+<body>
+    <!-- Navbar --> 
+    <nav>
+        <div class="nav-wrapper">
+            <a href="Home.html" class="brand-logo" style="color: #fce4ec !important;"> 
+                <i class= "material-icons" style="color: #fce4ec !important;">web</i>May Website
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="Home.html"><i class="material-icons left">home</i>Home</a></li>
+                <li><a href="About.html"><i class="material-icons left">person</i>About</a></li>
+                <li><a href="Portofolio.html"><i class="material-icons left">work</i>Portofolio</a></li>
+                <li><a href="Kontak.html"><i class="material-icons left">contact_mail</i>Kontak</a></li>
+                <li><a href="Produk.html"><i class="material-icons left">shopping_cart</i>Produk</a></li>
+        </ul>
+        </div>
+    </nav>
+    
+        <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h2><i class="material-icons large">shopping_cart</i><br>Produk</h2>
+            <p>Nikmati Produk Alami Buatan May</p>
+            <div class="row">
+                <div class="col s12 m6 offset-m3">
+                    <div class="search-bar" style="background: #f0dce3; border-radius: 30px; padding: 5px 20px; margin-top: 20px; border: 1px solid #f8256f;">
+                        <div class="input-field" style="margin: 0;">
+                            <i class="material-icons prefix" style="color: #f35589 !important;">search</i>
+                            <input id="search" type="text" placeholder="Cari produk..." style="border-bottom: none !important; color: #410418 !important; box-shadow: none !important;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Products Grid -->
+    <div class="container">
+        <div class="row">
+            <!-- Product 1 -->
+            <div class="col s12 m6 l3">
+                <div class="card card-product">
+                    <div class="card-image">
+                        <img src="image/toner.jpg">
+                        <span class="price-tag">Rp59.000</span>
+                        <a class="btn-floating halfway-fab waves-effect waves-light btn-cart"><i class="material-icons">add_shopping_cart</i></a>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title truncate">Rose Hydrating Toner</span>
+                        <p class="grey-text text-darken-1">Toner mawar alami untuk melembapkan dan menyegarkan kulit.</p>
+                        <div class="amber-text">
+                            <i class="material-icons tiny">star</i>
+                            <i class="material-icons tiny">star</i>
+                            <i class="material-icons tiny">star</i>
+                            <i class="material-icons tiny">star</i>
+                            <i class="material-icons tiny">star_half</i>
+                            <span class="grey-text text-darken-2">(4.5)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="col s12 m6 l3">
+                <div class="card card-product">
+                    <div class="card-image">
+                        <img src="image/moist.jpg">
+                        <span class="price-tag">Rp89.000</span>
+                        <a class="btn-floating halfway-fab waves-effect waves-light btn-cart"><i class="material-icons">add_shopping_cart</i></a>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title truncate">Pink Watermelon Moisturizer</span>
+                        <p class="grey-text text-darken-1">Gel moisturizer ringan dengan ekstrak semangka untuk hidrasi maksimal.</p>
+                        <div class="amber-text">
+                            <i class="material-icons tiny">star</i>
+                            <i class="material-icons tiny">star</i>
+                            <i class="material-icons tiny">star</i>
+                            <i class="material-icons tiny">star</i>
+                            <i class="material-icons tiny">star_border</i>
+                            <span class="grey-text text-darken-2">(4.0)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="col s12 m6 l3">
+                <div class="card card-product">
+                    <div class="card-image">
+                        <img src="image/serum.jpg">
+                        <span class="price-tag">Rp119.000</span>
+                        <span class="badge-new">BEST SELLER</span>
+                        <a class="btn-floating halfway-fab waves-effect waves-light btn-cart"><i class="material-icons">add_shopping_cart</i></a>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title truncate">Pink Rice Glow Serum</span>
+                        <p class="grey-text text-darken-1">Serum beras untuk mencerahkan dan meratakan warna kulit.</p>
+                        <div class="amber-text">
+                            <i class="material-icons tiny">star</i>
+                            <i class="material-icons tiny">star</i>
+                            <i class="material-icons tiny">star</i>
+                            <i class="material-icons tiny">star</i>
+                            <i class="material-icons tiny">star</i>
+                            <span class="grey-text text-darken-2">(5.0)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="col s12 m6 l3">
+                <div class="card card-product">
+                    <div class="card-image">
+                        <img src="image/mask.jpg">
+                        <span class="price-tag">Rp99.000</span>
+                        <a class="btn-floating halfway-fab waves-effect waves-light btn-cart"><i class="material-icons">add_shopping_cart</i></a>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title truncate">Pink Clay Brightening Mask</span>
+                        <p class="grey-text text-darken-1">Masker clay pink untuk membersihkan pori dan membuat kulit lebih cerah.</p>
+                        <div class="amber-text">
+                            <i class="material-icons tiny">star</i>
+                            <i class="material-icons tiny">star</i>
+                            <i class="material-icons tiny">star</i>
+                            <i class="material-icons tiny">star</i>
+                            <i class="material-icons tiny">star_border</i>
+                            <span class="grey-text text-darken-2">(4.2)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Promo Banner -->
+        <div class="card pink darken-1 white-text" style="margin-top: 30px;">
+            <div class="card-content">
+                <div class="row valign-wrapper">
+                    <div class="col s8">
+                        <h5><i class="material-icons left">local_offer</i>Promo Spesial!</h5>
+                        <p>Gratis ongkir untuk pembelian di atas Rp 200.000!
+                        </p>
+                        <p>Hubungi May Admin Ya!</p>
+                    </div>
+                    <div class="col s4 right-align">
+                        <a class="btn white pink-text waves-effect waves-light" href="Kontak.html">Lihat Detail</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="page-footer" style="padding: 0; background-color: #e91e63 !important; border-top: 1px solid #fce4ec;"> 
+    <div class="container">
+        <div class="row" style="margin-bottom: 0; padding: 10px 0;">
+        <div class="col l8 s12">
+            <h6 style="margin: 0; color: #fce4ec; font-weight: bold;">MateriWeb</h6>
+            <p style="margin: 0; font-size: 12px; color: #fce4ec;">
+            Belajar desain web praktis dengan Materialize CSS.
+            </p>
+        </div>
+        <div class="col l4 s12">
+            <div style="margin-top: 5px;">
+                <a href="Home.html" style="margin-left: 10px; font-size: 12px; color: #fce4ec; font-weight: 500;" class="right">Home</a>
+                <a href="About.html" style="margin-left: 10px; font-size: 12px; color: #fce4ec; font-weight: 500;" class="right">About</a>
+                <a href="Portofolio.html" style="margin-left: 10px; font-size: 12px; color: #fce4ec; font-weight: 500;" class="right">Portofolio</a>
+                <a href="Kontak.html" style="margin-left: 10px; font-size: 12px; color: #fce4ec; font-weight: 500;" class="right">Kontak</a>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="footer-copyright" style="line-height: 30px; height: 30px; background-color: #e91e63;">
+        <div class="container" style="font-size: 11px; color: #fce4ec;">
+        © 2026 MaterializeCSS | Mayra Ruhandini - 253307003
+        <a style="color: #fce4ec; font-weight: bold;" class="right" href="https://pnm.ac.id/">Politeknik Negeri Madiun</a>
+        </div>
+    </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                M.AutoInit();
+            });
+        </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <title>Program Basic Dialog jQuery</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <style>
+        body {
+            background-color: #f0f2f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+
+        p {
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        #btnBuka {
+            background-color: maroon;
+            color: white;
+            border: none;
+            padding: 10px 24px;
+            font-size: 14px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        #btnBuka:hover {
+            background-color: rgb(173, 63, 63);
+        }
+
+        .ui-dialog-titlebar {
+            background-color: rgb(188, 50, 50) !important;
+            border: none !important;
+        }
+
+        .ui-dialog-title {
+            color: white !important;
+        }
+
+        .ui-dialog-titlebar-close {
+            color: white !important;
+        }
+
+        .ui-dialog-content {
+            font-size: 14px;
+            color: #333;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Contoh Jendela Dialog</h2>
+    <p>Halaman ini akan otomatis menampilkan kotak dialog saat dimuat.</p>
+    <button id="btnBuka">Buka Dialog Lagi</button>
+
+    <div id="dialogBasic" title="Informasi Penting" style="display:none;">
+        <p>Ini adalah jendela <strong>Basic Dialog</strong> yang dibuat menggunakan jQuery UI. Anda dapat menggeser atau
+            menutup jendela ini.</p>
+    </div>
+
+    <script>
+        $(function () {
+            $("#dialogBasic").dialog({
+                autoOpen: true,
+                modal: true,
+                width: 360,
+                show: { effect: "blind", duration: 500 },
+                hide: { effect: "explode", duration: 500 },
+                position: { my: "center", at: "center", of: window }
+            });
+
+            $("#btnBuka").on("click", function () {
+                $("#dialogBasic").dialog("open");
+            });
+        });
+    </script>
+
+</body>
+
+</html>

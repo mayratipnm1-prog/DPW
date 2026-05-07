@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <title>Video HTML</title>
+    <link rel="stylesheet" href="style.css">
+
+    <title>Halaman Beranda</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta name="author" content="Mayra Ruhandini">
+    <meta name="nim" content="253307003">
+
+    
+    <meta name="description" content="Website praktikum HTML5 Lanjut">
+    <meta name="keywords" content="HTML5, Form, Audio, Video, SVG, Canvas">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Verdana, Geneva, sans-serif;
+            margin: 0;
+        }
+
+        header {
+            background-color: #708090;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+
+        nav {
+            float: left;
+            width: 30%;
+            height:950px;
+            background: #ccc;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-bottom: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        article {
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: #f3eded;
+            height: 950px;
+        }
+
+        img {
+            background-color: #4682B4;
+            padding: 3px;
+            text-align: center;
+            color: white;
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 600px) {
+
+            nav,
+            article {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h2>Praktikum Dasar HTML5</h2>
+    </header>
+
+    <section>
+
+        <nav>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gambar.html">Gambar</a></li>
+            <li><a href="event.html">Event</a></li>
+            <li><a href="audio.html">Audio</a></li>
+            <li><a href="video.html">Video</a></li>
+            <li><a href="svg.html">SVG</a></li>
+            <li><a href="canvas.html">Canvas</a></li>
+            <li><a href="pendaftaran.html">Pendaftaran</a></li>
+        </nav>
+
+        <article>
+            <h1>Video Mayra</h1>
+
+            <figure>
+                <figcaption><strong>Video Buka Bersama 2A </strong></figcaption>
+                <video controls autoplay width="500">
+                    <source src="video/Video1.mp4" type="video/mp4">
+                </video>
+                <p><I>Autoplay digunakan untuk memutar Video secara otomatis saat halaman dibuka tanpa dimute </I></p>
+            </figure>
+
+            <figure>
+                <figcaption><strong>Video YouTube</strong></figcaption>
+                <iframe width="auto" height="200" src="https://youtu.be/DiLOsoLyX9c?si=e-YuVHxrq-JS9w9B"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </figure>
+
+            <p>
+                <strong>Kesimpulan Hasil Uji coba:</strong><br>
+                <p>Video lokal yang menggunakan tag <code>&lt;video&gt;</code> bisa diputar langsung melalui file yang sudah tersimpan dalam folder website dan bisa dikontrol menggunakan atribut seperti controls, autoplay, dan muted.</p>
+                <p>Sedangkan video dari youtube ditampilkan menggunakan tag <code>&lt;iframe&gt;</code> yang mengambil video langsung dari server youtube, jadi video bisa diputar tanpa harus menyimpan secara lokal.</p>
+                <p>Dengan  penggunaan iframe bisa memudahkan dalam menambahkan video dari sumber luar ke dalam halaman website
+             </p>
+            </p>
+        </article>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2026 - Praktikum HTML5 | Angger Binuko</p>
+    </footer>
+
+</body>
+
+</html>

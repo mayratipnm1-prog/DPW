@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Form Pendaftaran HTML</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Mayra Ruhandini">
+<meta name="nim" content="253307003">
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+header {
+  background-color: #708090;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+nav {
+  float: left;
+  width: 30%;
+  height: 550px;
+  background: #ccc;
+  padding: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li{
+  margin-bottom:10px;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 550px;
+}
+
+fieldset{
+  margin-bottom:20px;
+  padding:15px;
+}
+
+label{
+  display:inline-block;
+  width:160px;
+  margin-bottom:10px;
+}
+
+input{
+  margin-bottom:10px;
+}
+
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+@media (max-width:600px) {
+  nav, article {
+    width:100%;
+    height:auto;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h2>Praktikum Dasar HTML5</h2>
+</header>
+
+<section>
+
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="gambar.html">Gambar</a></li>
+<li><a href="event.html">Event</a></li>
+<li><a href="audio.html">Audio</a></li>
+<li><a href="video.html">Video</a></li>
+<li><a href="svg.html">SVG</a></li>
+<li><a href="canvas.html">Canvas</a></li>
+<li><a href="pendaftaran.html">Form</a></li>
+</ul>
+</nav>
+
+<article>
+
+<h1>Form Jadwal Pertemuan</h1>
+
+<form>
+
+<fieldset>
+<legend>Informasi Pribadi</legend>
+
+<label>Nama</label>
+<input type="text" name="nama" required><br>
+
+<label>No. Telepon</label>
+<input type="tel" pattern="[+62]{1}-[9-10]{4}" placeholder="0812-123456" required><br>
+
+<label>Alamat Email</label>
+<input type="email" placeholder="mayraruhand@gmail.com" required><br>
+
+<label>Tanggal Lahir</label>
+<input type="date" min="1970-01-01" max="2025-01-01" required>
+
+</fieldset>
+
+<fieldset>
+<legend>Permintaan Pertemuan</legend>
+
+<label>Tujuan Pertemuan</label>
+<input type="text"><br>
+
+<label>Tingkat Kepentingan</label>
+<input type="range" min="0" max="100"><br>
+
+<label>Tanggal</label>
+<input type="date" required><br>
+
+<label>Waktu</label>
+<input type="time" min="17:00" max="21:00" required>
+
+</fieldset>
+
+<input type="submit" value="Submit">
+
+</form>
+
+</article>
+
+</section>
+
+<footer>
+<p><i>copyright@Mayra Ruhandini_253307003_2026</i></p>
+</footer>
+
+</body>
+</html>

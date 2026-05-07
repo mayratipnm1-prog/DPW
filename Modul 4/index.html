@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indeks Praktikum CSS Dasar</title>
+    <style>
+        /* Menggunakan teknik dari Materi 2 & 5 [cite: 103, 294] */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f0f0;
+            margin: 40px;
+            line-height: 1.6;
+        }
+
+        .container {
+            background-color: rgb(255, 234, 226);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: auto;
+        }
+
+        h1 {
+            color: #333;
+            border-bottom: 2px solid rgb(0, 191, 255); /* Referensi Materi 4 [cite: 222] */
+            padding-bottom: 10px;
+        }
+
+        /* Styling Daftar Link menggunakan Materi 6 [cite: 333-353] */
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 15px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+
+        li:hover {
+            background-color: #e9f5ff;
+            transform: translateX(10px);
+        }
+
+        a {
+            text-decoration: none;
+            color: #0066cc;
+            font-weight: bold;
+            display: block;
+        }
+
+        a:hover {
+            color: #bd351a;
+        }
+
+        .desc {
+            font-size: 0.9em;
+            color: #466088;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Daftar Tugas Modul 4: CSS Dasar</h1>
+    <p>Silakan klik tautan di bawah ini untuk melihat hasil praktikum:</p>
+
+    <ul>
+        <li>
+            <a href="simple.html">1a. Simple Selectors</a>
+            <div class="desc">Latihan penggunaan Elemen, ID (#), dan Class (.) selector.</div>
+        </li>
+        <li>
+            <a href="combinator.html">1b. Combinator Selectors</a>
+            <div class="desc">Latihan Descendant, Child, Adjacent, dan General Sibling selectors.</div>
+        </li>
+
+        <li>
+            <a href="pseudo.html">1c. Pseudo-class Selectors</a>
+            <div class="desc">Mengatur gaya elemen saat interaksi (Hover pada Div dan Link).</div>
+        </li>
+        <li>
+            <a href="pseudo_elemen.html">1d. Pseudo-elements Selectors</a>
+            <div class="desc">Menggunakan ::first-line untuk dekorasi teks artikel.</div>
+        </li>
+
+        <li>
+            <a href="header.html">2. External Style Sheet (Dasar)</a>
+            <div class="desc">Menghubungkan HTML dengan file style1.css.</div>
+        </li>
+        <li>
+            <a href="selector.html">3. Selector ID (External)</a>
+            <div class="desc">Implementasi spesifik ID dan Class menggunakan style2.css.</div>
+        </li>
+
+        <li>
+            <a href="border-style.html">4. Border Style</a>
+            <div class="desc">Eksperimen berbagai jenis bingkai (Solid, Dotted, Ridge, dll).</div>
+        </li>
+        <li>
+            <a href="margin.html">5. Pengaturan Margin</a>
+            <div class="desc">Mengatur jarak luar elemen (Atas, Kanan, Bawah, Kiri).</div>
+        </li>
+        <li>
+            <a href="padding.html">7. Pengaturan Padding</a>
+            <div class="desc">Mengatur jarak dalam antara konten dan border.</div>
+        </li>
+
+        <li>
+            <a href="hyperlink.html">6. Hyperlink Advanced</a>
+            <div class="desc">Custom link dengan Text Transform dan Decoration.</div>
+        </li>
+        <li>
+            <a href="display.html">8. Display Property</a>
+            <div class="desc">Mengubah elemen Inline (span) menjadi Block.</div>
+        </li>
+
+        <li>
+            <a href="template.html">9. Studi Kasus: Laman Web Lengkap</a>
+            <div class="desc">Antarmuka web Politeknik Negeri Madiun menggunakan struktur Layout lengkap.</div>
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>

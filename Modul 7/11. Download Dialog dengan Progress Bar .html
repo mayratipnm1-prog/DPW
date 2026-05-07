@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Download Dialog</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <style>
+        body {
+            background-color: #f0f2f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        /* Dialog */
+        .ui-dialog {
+            border-radius: 8px !important;
+            border: 1px solid #c8d8e8 !important;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12) !important;
+        }
+
+        .ui-dialog-titlebar {
+            background-color: #3498db !important;
+            border: none !important;
+            border-radius: 6px 6px 0 0 !important;
+            padding: 10px 16px !important;
+        }
+
+        .ui-dialog-title {
+            color: white !important;
+            font-size: 14px !important;
+        }
+
+        .ui-dialog-titlebar-close {
+            color: white !important;
+        }
+
+        .ui-dialog-content {
+            padding: 20px !important;
+            background: #fff;
+        }
+
+        /* File info row */
+        .file-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .file-icon {
+            width: 36px;
+            height: 36px;
+            background-color: #ebf4fb;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .file-icon svg {
+            width: 20px;
+            height: 20px;
+            fill: #3498db;
+        }
+
+        .file-name {
+            font-size: 13px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .file-size {
+            font-size: 12px;
+            color: #888;
+            margin-top: 2px;
+        }
+
+        /* Status label */
+        .progress-label {
+            font-size: 13px;
+            color: #555;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .progress-label span {
+            font-weight: 600;
+            color: #3498db;
+        }
+
+        /* Progress bar wrapper */
+        .bar-track {
+            background-color: #e0ecf8;
+            border-radius: 20px;
+            height: 10px;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            height: 100%;
+            width: 0%;
+            background-color: #3498db;
+            border-radius: 20px;
+            transition: width 0.1s linear;
+        }
+
+        /* Speed info */
+        .dl-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            font-size: 11px;
+            color: #999;
+        }
+
+        /* Hide default jQuery UI progressbar, we use custom */
+        #progressbar { display: none; }
+    </style>
+</head>
+<body>
+
+<div id="download-dialog" title="File Download">
+    <div class="file-info">
+        <div class="file-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 7V3.5L18.5 9H13zM12 17l-4-4h2.5v-3h3v3H16l-4 4z"/>
+            </svg>
+        </div>
+        <div>
+            <div class="file-name">Dialog.txt</div>
+            <div class="file-size">124 MB</div>
+        </div>
+    </div>
+
+    <div class="progress-label">
+        <span id="status-text">Memulai unduhan...</span>
+        <span id="pct-text">0%</span>
+    </div>
+
+    <div class="bar-track">
+        <div class="bar-fill" id="bar-fill"></div>
+    </div>
+
+    <div class="dl-meta">
+        <span id="dl-speed">-- KB/s</span>
+        <span id="dl-remaining">Menghitung...</span>
+    </div>
+
+    <div id="progressbar"></div>
+</div>
+
+<script>
+$(function () {
+    var progressbar = $("#progressbar");
+    var barFill     = $("#bar-fill");
+    var pctText     = $("#pct-text");
+    var statusText  = $("#status-text");
+    var dlSpeed     = $("#dl-speed");
+    var dlRemaining = $("#dl-remaining");
+
+    var speeds = ["480 KB/s", "612 KB/s", "734 KB/s", "891 KB/s", "1.1 MB/s", "956 KB/s"];
+
+    progressbar.progressbar({
+        value: false,
+        change: function () {
+            var val = progressbar.progressbar("value");
+            barFill.css("width", val + "%");
+            pctText.text(val + "%");
+            statusText.text("Mengunduh file...");
+
+            var randomSpeed = speeds[Math.floor(Math.random() * speeds.length)];
+            var remaining   = Math.ceil((100 - val) / 2) + " detik";
+            dlSpeed.text(randomSpeed);
+            dlRemaining.text("Sisa: " + remaining);
+        },
+        complete: function () {
+            barFill.css("width", "100%");
+            pctText.text("100%");
+            statusText.text("Unduhan Selesai!");
+            dlSpeed.text("--");
+            dlRemaining.text("Selesai");
+        }
+    });
+
+    function progress() {
+        var val = progressbar.progressbar("value") || 0;
+        progressbar.progressbar("value", val + 2);
+        if (val < 99) {
+            setTimeout(progress, 80);
+        }
+    }
+
+    $("#download-dialog").dialog({
+        modal: true,
+        width: 360,
+        resizable: false,
+        closeOnEscape: false,
+        position: { my: "center", at: "center", of: window }
+    });
+
+    setTimeout(progress, 1000);
+});
+</script>
+
+</body>
+</html>

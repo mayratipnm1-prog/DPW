@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <title>Canvas HTML</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta name="author" content="Mayra Ruhandini">
+    <meta name="nim" content="253307003">
+
+    
+    <meta name="description" content="Website praktikum HTML5 Lanjut">
+    <meta name="keywords" content="HTML5, Form, Audio, Video, SVG, Canvas">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Verdana, Geneva, sans-serif;
+            margin: 0;
+        }
+
+        header {
+            background-color: #708090;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+
+        nav {
+            float: left;
+            width: 30%;
+            height: 500px;
+            background: #ccc;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-bottom: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        article {
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: #f1f1f1;
+            height: 500px;
+        }
+
+        img {
+            background-color: #4682B4;
+            padding: 3px;
+            text-align: center;
+            color: white;
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 600px) {
+
+            nav,
+            article {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <header>
+        <h2>Praktikum Dasar HTML5</h2>
+    </header>
+
+    <section>
+
+        <nav>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gambar.html">Gambar</a></li>
+            <li><a href="event.html">Event</a></li>
+            <li><a href="audio.html">Audio</a></li>
+            <li><a href="video.html">Video</a></li>
+            <li><a href="svg.html">SVG</a></li>
+            <li><a href="canvas.html">Canvas</a></li>
+            <li><a href="pendaftaran.html">Pendaftaran</a></li>
+        </nav>
+
+        <article>
+            <h1>Mayra Canvas</h1>
+
+            <canvas id="canvas" width="400" height="300" style="background-color:#736f6f"></canvas>
+            </canvas>
+
+            <script src="main.js"></script>
+
+            </script>
+
+            <p><b>Kesimpulan:</b><br>
+                Canvas digunakan untuk menggambar berbagai bentuk menggunakan JavaScript. 
+                Berbeda dengan SVG, canvas bersifat pixel-based sehingga gambar bisa digambar langsung pada area canvas.</p>
+            </p>
+        </article>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2026 - Praktikum HTML5 | Angger Binuko</p>
+    </footer>
+
+</body>
+
+</html>

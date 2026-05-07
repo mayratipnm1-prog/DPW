@@ -1,0 +1,230 @@
+<! DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home - Belajar Framework Materialize</title>
+
+<!-- Materialize CSS CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<!-- ikon CSS dari frame work -->
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+ <style>
+        nav { background-color: #b4891e; }
+        nav ul a {
+            color: maroon; }
+
+        .page-header {
+            background: linear-gradient(135deg,#fbc02d, #fff59d);
+            color: maroon;
+            padding: 60px 0;
+            text-align: center;
+        }
+        .page-header h2 { font-weight: bold; }
+
+        .section-title {
+            color: rgb(134, 91, 91);
+            font-weight: bold;
+            margin: 30px 0 16px;
+        }
+
+        .profile-card {
+            border-radius: 12px;
+        }
+        .profile-card .card-image img {
+            border-radius: 12px 12px 0 0;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .skill-chip {
+            display: inline-block;
+            background-color: rgb(231, 167, 167);
+            color: rgb(52, 11, 11);
+            padding: 6px 14px;
+            border-radius: 20px;
+            margin: 4px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .timeline-item {
+            border-left: 4px solid rgb(195, 99, 99);
+            padding: 10px 20px;
+            margin-bottom: 16px;
+            background-color: #f6f3dc;
+            border-radius: 0 8px 8px 0;
+        }
+        .timeline-item h6 { color: rgb(87, 8, 8); font-weight: bold; margin: 0; }
+        .timeline-item p  { margin: 4px 0 0; font-size: 14px; color: #555; }
+  </style> 
+</head>
+
+<body>
+ <!-- Navbar -->
+  <nav>
+    <div class="nav-wrapper">
+        <a href="About.html" class="brand-logo" style="color: #800000 !important;">
+            <i class="material-icons">web</i>May Website
+        </a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="Home.html"><i class="material-icons left">home</i>Home</a></li>
+            <li><a href="About.html"><i class="material-icons left">person</i>About</a></li>
+            <li><a href="Portofolio.html"><i class="material-icons left">work</i>Portofolio</a></li>
+            <li><a href="Kontak.html"><i class="material-icons left">contact_mail</i>Kontak</a></li>
+            <li><a href="Produk.html"><i class="material-icons left">shopping_cart</i>Produk</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+    <div class="page-header">
+        <h2><i class="material-icons large">person</i><br>Tentang Kami</h2>
+        <p>Kenali lebih dekat tentang website dan pengembangnya</p>
+    </div>
+
+     <!-- Identitas -->
+<div class="container">
+  <div class="row" style="margin-top: 30px;">
+
+    <div class="col s12 m4">
+      <div class="card profile-card hoverable center-align">
+        <div class="card-content">
+          <img src="image/Mayra.jpeg" alt="Profile" class="circle responsive-img" style="width: 120px; height: 120px; object-fit: cover; margin-bottom: 15px;">
+          
+          <span class="card-title" style="color: #800000 !important; font-weight: bold;">Mayra Ruhandini</span>
+          
+          <p style="color: #800000;">NIM : 253307003</p>
+          <p style="color: #800000;">Kelas : 2A</p>
+          <p style="color: #800000;">Program Studi Teknologi Informasi</p> 
+          
+          <br>
+          <div class="skills">
+            <span class="skill-chip" style="color: #800000; margin: 2px; display: inline-block;">HTML</span>
+            <span class="skill-chip" style="color: #800000; margin: 2px; display: inline-block;">CSS</span>
+            <span class="skill-chip" style="color: #800000; margin: 2px; display: inline-block;">JavaScript</span>
+            <span class="skill-chip" style="color: #800000; margin: 2px; display: inline-block;">Materialize</span>
+          </div>
+        </div>
+        <div class="card-action">
+          <a href="Kontak.html" style="color: #800000 !important; font-weight: bold;">Hubungi Saya</a>
+        </div>
+      </div>
+    </div>
+
+          <!-- Deskripsi & Timeline -->
+    <div class="col s12 m8">
+    <div class="about-section" style="padding-left: 20px;">
+        
+        <h5 style="color: #800000; font-weight: bold; border-bottom: 2px solid #800000; display: inline-block;">
+            <i class="material-icons left" style="color: #800000;">book</i>Tentang Website Ini
+        </h5>
+        
+        <p class="grey-text text-darken-3" style="text-align: justify; line-height: 1.6;">
+            Website ini saya buat sebagai bagian dari <strong>Praktikum CSS Framework pada Mata Kuliah Desain Dan Pemrograman Web</strong>. 
+            Framework yang digunakan adalah <strong>Materialize CSS</strong>, yaitu framework berbasis 
+            <em>Material Design</em> dari Google yang menyediakan komponen UI modern dan responsif.
+        </p>
+        <p class="grey-text text-darken-3" style="text-align: justify; line-height: 1.6;">
+            Dengan Materialize, pembuatan website menjadi lebih cepat dan terstruktur karena kita cukup 
+            menggunakan class-class yang sudah tersedia tanpa perlu menulis CSS dari nol.
+        </p>
+
+        <h5 style="color: #800000; font-weight: bold; margin-top: 30px; border-bottom: 2px solid #800000; display: inline-block;">
+            <i class="material-icons left" style="color: #800000;">history</i>Riwayat Belajar
+        </h5>
+        
+        <div class="timeline" style="margin-top: 15px;">
+            <div class="timeline-item" style="margin-bottom: 15px; border-left: 3px solid #800000; padding-left: 15px;">
+                <h6 style="color: #800000; margin: 0; font-weight: bold;">HTML Dasar</h6>
+                <p style="margin: 5px 0; font-size: 14px;">Mempelajari struktur dasar HTML, tag-tag umum, dan semantik HTML5.</p>
+            </div>
+            
+            <div class="timeline-item" style="margin-bottom: 15px; border-left: 3px solid #800000; padding-left: 15px;">
+                <h6 style="color: #800000; margin: 0; font-weight: bold;">CSS & Box Model</h6>
+                <p style="margin: 5px 0; font-size: 14px;">Mempelajari CSS, Box Model, selector, dan cara styling elemen HTML.</p>
+            </div>
+            
+            <div class="timeline-item" style="margin-bottom: 15px; border-left: 3px solid #800000; padding-left: 15px;">
+                <h6 style="color: #800000; margin: 0; font-weight: bold;">Flexbox & Grid</h6>
+                <p style="margin: 5px 0; font-size: 14px;">Mempelajari sistem layout modern dengan CSS Flexbox dan CSS Grid.</p>
+            </div>
+            
+            <div class="timeline-item" style="margin-bottom: 15px; border-left: 3px solid #800000; padding-left: 15px;">
+                <h6 style="color: #800000; margin: 0; font-weight: bold;">CSS Framework (Materialize)</h6>
+                <p style="margin: 5px 0; font-size: 14px;">Mempelajari dan menerapkan Materialize CSS untuk membangun website yang responsif.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Alasan memilih Materialize FW -->
+</div> 
+</div>
+
+<div style="background-color: #fff9c4; width: 100%; border-top: 1px solid #fbc02d; border-bottom: 1px solid #fbc02d; margin: 0; padding: 0;">
+    <div class="container" style="padding: 5vh 0;">
+        
+        <h4 class="center-align" style="color: #800000; font-weight: bold; margin-bottom: 35px;">
+            Keunggulan Materialize CSS
+        </h4>
+        
+        <div class="row" style="margin-bottom: 0;">
+            <div class="col s12 m4 center-align">
+                <i class="material-icons large" style="color: #800000;">bolt</i>
+                <h6 style="color: #800000; font-weight: bold;">Proses Lebih Cepat</h6>
+                <p class="grey-text text-darken-3">Framework ini menyediakan berbagai komponen siap pakai, sehingga kita tidak perlu menyusun kode CSS dari awal dan waktu pengerjaan jadi lebih singkat.</p>
+            </div>
+            
+            <div class="col s12 m4 center-align">
+                <i class="material-icons large" style="color: #800000;">phonelink</i>
+                <h6 style="color: #800000; font-weight: bold;">Tampilan Responsif</h6>
+                <p class="grey-text text-darken-3">Sistem grid yang digunakan sangat memudahkan kita dalam mengatur tata letak agar tetap rapi saat diakses melalui laptop, tablet, maupun smartphone.</p>
+            </div>
+            
+            <div class="col s12 m4 center-align">
+                <i class="material-icons large" style="color: #800000;">auto_awesome</i>
+                <h6 style="color: #800000; font-weight: bold;">Desain Terstandar</h6>
+                <p class="grey-text text-darken-3">Karena berbasis Material Design dari Google, website yang dihasilkan memiliki tampilan yang modern, bersih, dan sesuai dengan standar antarmuka saat ini.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+  <footer class="page-footer" style="padding: 0; background-color: #fbc02d !important; border-top: 1px solid #e0a800;"> 
+  <div class="container">
+    <div class="row" style="margin-bottom: 0; padding: 10px 0;">
+      <div class="col l8 s12">
+        <h6 style="margin: 0; color: #800000; font-weight: bold;">MateriWeb</h6>
+        <p style="margin: 0; font-size: 12px; color: #800000;">
+          Belajar desain web praktis dengan Materialize CSS.
+        </p>
+      </div>
+      <div class="col l4 s12">
+        <div style="margin-top: 5px;">
+            <a href="Home.html" style="margin-left: 10px; font-size: 12px; color: #800000; font-weight: 500;" class="right">Home</a>
+            <a href="Portofolio.html" style="margin-left: 10px; font-size: 12px; color: #800000; font-weight: 500;" class="right">Portofolio</a>
+            <a href="Kontak.html" style="margin-left: 10px; font-size: 12px; color: #800000; font-weight: 500;" class="right">Kontak</a>
+            <a href="Produk.html" style="margin-left: 10px; font-size: 12px; color: #800000; font-weight: 500;" class="right">Produk</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright" style="line-height: 30px; height: 30px; background-color: rgba(0,0,0,0.05);">
+    <div class="container" style="font-size: 11px; color: #800000;">
+      © 2026 MaterializeCSS | Mayra Ruhandini - 253307003
+      <a style="color: #800000; font-weight: bold;" class="right" href="https://pnm.ac.id/">Politeknik Negeri Madiun</a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            M.AutoInit();
+        });
+    </script>
+</body>
+</html>

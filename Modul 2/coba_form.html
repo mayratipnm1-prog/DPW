@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Sederhana</title>
+    <link rel="icon" type="image/png" href="gambar/logo.png" sizes="16x16" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+    <form action="/action_page.php" method="get" target="_self">
+        <label for="depan">Nama depan :</label><br>
+        <input type="text" id="depan" name="i_name" value="Budi"><br>
+        
+        <label for="n_belakang">Nama Belakang :</label><br>
+        <input type="text" id="n_belakang" name="i_belakan" value="Prawira"><br><br>
+        
+        <input type="submit" value="Kirim">
+        <input type="reset" value="Reset">
+    </form>
+
+    <p>Jika Anda mengklik tombol "Kirim", data formulir akan dikirim ke halaman bernama "/action_page.php".</p>
+
+    <h3>Kesimpulan Ujicoba:</h3>
+    <p>
+        <i>
+        Kesimpulan: 
+        <p>Form ini digunakan untuk input nama depan dan belakang</p>
+        <p>ketika tombol "Kirim" ditekan, data akan dikirim ke halaman "/action_page.php" menggunakan metode POST</p>
+        <p>ketika tombol "reset" ditekan, data yang diinputkan akan dikosongkan</p>
+        </i>
+    </p>
+
+</body>
+</html>
