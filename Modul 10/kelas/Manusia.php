@@ -1,9 +1,10 @@
 <?php
+
 class Manusia
 {
     protected $name;
     protected $nik = "123212131243243";
-    protected $umur;
+    protected $umur; // Ditambahkan sesuai tugas no. 2
 
     public function getNama()
     {
