@@ -1,5 +1,5 @@
 <?php
-session_start(); // TAMBAHAN: untuk flash message
+session_start(); 
 include 'koneksi.php';
 
 if (isset($_POST['input'])) {

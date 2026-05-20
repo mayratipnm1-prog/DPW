@@ -4,7 +4,7 @@ class Manusia
 {
     protected $name;
     protected $nik = "123212131243243";
-    protected $umur; // Ditambahkan sesuai tugas no. 2
+    protected $umur; 
 
     public function getNama()
     {

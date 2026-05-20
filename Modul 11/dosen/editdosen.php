@@ -21,16 +21,12 @@ if (isset($_GET['idDosen'])) {
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        body { background: linear-gradient(135deg, #f0f4ff 0%, #e0e7ff 50%, #f5f3ff 100%); min-height: 100vh; font-family: 'Inter', sans-serif; }
-        .glass { background: rgba(255,255,255,0.9); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.6); }
-        .btn-press:active { transform: scale(0.96); }
-        .input-focus:focus { box-shadow: 0 0 0 3px rgba(245,158,11,0.15); }
-    </style>
+    
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="text-slate-700 antialiased flex items-center justify-center min-h-screen p-4">
+<body class="theme-dosen text-slate-700 antialiased flex items-center justify-center min-h-screen p-4">
 
-    <div class="w-full max-w-md animate-[fadeIn_0.5s_ease-out]">
+    <div class="w-full max-w-md animate-fade-page">
         <div class="glass rounded-2xl shadow-xl shadow-slate-200/50 overflow-hidden">
             <div class="px-6 py-5 border-b border-slate-100 bg-gradient-to-r from-amber-50/80 to-white/80 flex items-center gap-3">
                 <a href="viewdosen.php" class="w-8 h-8 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-slate-500 hover:text-amber-600 transition btn-press"><i class="fas fa-arrow-left text-sm"></i></a>
